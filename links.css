@@ -1,0 +1,128 @@
+/* Estilos CSS para a página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: blue;
+    color: black;
+    padding: 20px;
+    text-align: center;
+  }
+  nav {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav li {
+    margin: 0 10px;
+    position: relative;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  /* Estilos para submenu */
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #555;
+    padding: 0;
+  }
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+  nav ul ul a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+  }
+  nav ul ul a:hover {
+    background-color: #333;
+  }
+  nav li:hover ul {
+    display: inherit;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  section {
+    background-color: #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+  }
+  section h2 {
+    margin-top: 0;
+  }
+  section p {
+    margin-bottom: 0;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /*modificação para celular*/
+  @media only screen and (max-width: 600px) {
+header {
+font-size: 24px;
+padding: 10px;
+}
+nav {
+flex-direction: column;
+}
+nav ul {
+flex-direction: column;
+margin-top: 10px;
+}
+nav li {
+margin: 10px 0;
+position: relative;
+}
+nav a {
+display: block;
+padding: 10px;
+}
+nav ul ul {
+top: 0;
+}
+main {
+padding: 10px;
+}
+section {
+margin: 10px 0;
+width: 100%;
+}
+footer {
+font-size: 14px;
+padding: 5px;
+}
+}
